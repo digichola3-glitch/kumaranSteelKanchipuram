@@ -1,0 +1,29 @@
+.v-success .download-link {
+  font-weight: bolder;
+  font-size: larger;
+}
+.v-loading-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffffff4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.v-loading-overlay.disabled {
+  display: none;
+}
+.v-loading-overlay__spinner {
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.v-errors.hidden {
+  display: none;
+}
