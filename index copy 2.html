@@ -1106,535 +1106,6 @@ Shopify.routes.root = "/";</script>
 
 })();</script><script async="" src="js/shop_events_listener-3da45d37.js"></script>
 <script defer="" src="js/shopify-perf-kit-3.3.0.min.js" data-application="storefront-renderer" data-shop-id="92011397404" data-render-region="gcp-europe-west1" data-page-type="index" data-theme-instance-id="177027645724" data-theme-name="Cello" data-theme-version="3.0.0" data-monorail-region="shop_domain" data-resource-timing-sampling-rate="10" data-shs="true" data-shs-beacon="true" data-shs-export-with-fetch="true" data-shs-logs-sample-rate="1" data-shs-beacon-endpoint="https://Sri Kumaran Steels.store/api/collect"></script>
-
-
- <style>
-    :root {
-      --navy: #1a2e4a;
-      --navy-dark: #0f1e32;
-      --gold: #f5a623;
-      --gold-light: #ffc554;
-      --white: #ffffff;
-      --light-bg: #f5f7fa;
-      --text-dark: #1a2e4a;
-      --text-muted: #5a6a7e;
-      --border: #e2e8f0;
-      --card-shadow: 0 4px 20px rgba(26,46,74,0.10);
-    }
-
-    
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: var(--text-dark);
-      background: var(--white);
-      overflow-x: hidden;
-    }
- 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--gold);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 800;
-      color: var(--navy);
-      font-size: 18px;
-      letter-spacing: -1px;
-    }
-    .logo-text {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--navy);
-      line-height: 1.2;
-    }
-    .logo-text span { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); }
-    
-    /* ── HERO BANNER ── */
-    .hero-banner {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e3a5f 100%);
-      padding: 60px 20px 50px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-banner::before {
-      content: '';
-      position: absolute;
-      top: -40px; right: -40px;
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      background: rgba(245,166,35,0.10);
-    }
-    .hero-banner::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: -30px;
-      width: 180px; height: 180px;
-      border-radius: 50%;
-      background: rgba(245,166,35,0.07);
-    }
-    .breadcrumb {
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
-      margin-bottom: 14px;
-      letter-spacing: 0.5px;
-    }
-    .breadcrumb a { color: var(--gold); text-decoration: none; }
-    .hero-banner h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(26px, 6vw, 40px);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 12px;
-      position: relative; z-index: 1;
-    }
-    .hero-banner h1 span { color: var(--gold); }
-    .hero-banner p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.75);
-      max-width: 500px;
-      margin: 0 auto;
-      line-height: 1.7;
-      position: relative; z-index: 1;
-    }
-    .hero-divider {
-      width: 60px;
-      height: 4px;
-      background: var(--gold);
-      border-radius: 2px;
-      margin: 18px auto 0;
-    }
-
-    /* ── SECTIONS COMMON ── */
-
-    .mainSection { padding: 52px 20px; }
-
-    .aboutMain{ padding: 52px 20px; }
-
-    .aboutSection{
-      padding-bottom: 20px;
-    }
-    
-    .section-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(20px, 5vw, 28px);
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .section-title span { color: var(--gold); }
-    .section-subtitle {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-    .section-badge {
-      display: inline-block;
-      background: rgba(245,166,35,0.12);
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 5px 12px;
-      border-radius: 20px;
-      margin: 10px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* ── ABOUT STORY ── */
-    .about-section { background: var(--white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .about-text p {
-      font-size: 14px;
-      color: #3d4f63;
-      line-height: 1.85;
-      margin-bottom: 14px;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-    .values-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .value-tag {
-      background: var(--navy);
-      color: var(--white);
-      font-size: 12px;
-      font-weight: 600;
-      font-family: 'Poppins', sans-serif;
-      padding: 7px 14px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .value-tag .dot {
-      width: 7px; height: 7px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* ── STATS BAR ── */
-    .stats-bar {
-      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
-      padding: 36px 20px;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .stat-item { text-align: center; }
-    .stat-num {
-      font-family: 'Poppins', sans-serif;
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 12px;
-      color: rgba(255,255,255,0.70);
-      margin-top: 6px;
-      line-height: 1.4;
-    }
-
-    /* ── FOUNDER ── */
-    .founder-section { background: var(--light-bg); }
-    .founder-card {
-      background: var(--white);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .founder-img-wrap {
-      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
-      padding: 36px 20px 24px;
-      text-align: center;
-    }
-    .founder-avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.10);
-      border: 4px solid var(--gold);
-      margin: 0 auto 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .founder-avatar img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-    .founder-avatar .placeholder-icon {
-      font-size: 44px;
-      color: rgba(255,255,255,0.4);
-    }
-    .founder-name {
-      font-family: 'Poppins', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .founder-role {
-      font-size: 12px;
-      color: var(--gold);
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-    .founder-body {
-      padding: 24px 22px;
-    }
-    .founder-body p {
-      font-size: 14px;
-      color: #3d4f63;
-      line-height: 1.80;
-      margin-bottom: 12px;
-    }
-    .founder-body p:last-child { margin-bottom: 0; }
-
-    /* ── PEOPLE & CULTURE ── */
-   
-    .culture-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .culture-card {
-      background: var(--light-bg);
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      border-left: 4px solid var(--gold);
-    }
-    .culture-icon {
-      width: 46px; height: 46px;
-      background: var(--navy);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .culture-icon svg { width: 22px; height: 22px; fill: var(--gold); }
-    .culture-card h4 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 5px;
-    }
-    .culture-card p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ── TEAMS & FEATURES GRID ── */
-    .teams-section { background: var(--light-bg); }
-    .teams-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .team-card {
-      background: var(--white);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .team-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 32px rgba(26,46,74,0.14);
-    }
-    .team-card-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #d0d8e4 0%, #b8c4d4 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 8px;
-      position: relative;
-      overflow: hidden;
-    }
-    .team-card-img::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(26,46,74,0.18) 100%);
-    }
-    .team-card-img svg {
-      width: 40px; height: 40px;
-      fill: rgba(26,46,74,0.25);
-    }
-    .team-card-img span {
-      font-size: 11px;
-      color: rgba(26,46,74,0.45);
-      font-weight: 600;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 0.5px;
-    }
-    /* Color tints per card type */
-    .card-marketing .team-card-img { background: linear-gradient(135deg, #dde8f5 0%, #c2d3e8 100%); }
-    .card-admin    .team-card-img { background: linear-gradient(135deg, #e8f0e0 0%, #ccdec0 100%); }
-    .card-transport .team-card-img { background: linear-gradient(135deg, #faecd6 0%, #f0d4a0 100%); }
-    .card-accounts  .team-card-img { background: linear-gradient(135deg, #f0e0ec 0%, #dfc0d8 100%); }
-    .card-fleet     .team-card-img { background: linear-gradient(135deg, #dde8f5 0%, #c0cedf 100%); }
-    .card-workforce .team-card-img { background: linear-gradient(135deg, #e8f0e0 0%, #c8ddb8 100%); }
-    .card-godown    .team-card-img { background: linear-gradient(135deg, #f5e8d8 0%, #e0c8a8 100%); }
-    .card-cement    .team-card-img { background: linear-gradient(135deg, #eeeaf5 0%, #d8d0ea 100%); }
-    .card-steel     .team-card-img { background: linear-gradient(135deg, #dae4ee 0%, #b8cedd 100%); }
-
-    .team-card-body { padding: 16px 16px 18px; }
-    .team-badge {
-      display: inline-block;
-      background: rgba(245,166,35,0.12);
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      font-family: 'Poppins', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 3px 9px;
-      border-radius: 20px;
-      margin-bottom: 7px;
-    }
-    .team-card-body h3 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-    .team-card-body p {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* Wide cards (span 2 cols) */
-    .team-card.wide {
-      grid-column: span 2;
-    }
-    .team-card.wide .team-card-img {
-      aspect-ratio: 16/6;
-    }
-
-    /* ── NETWORK SECTION ── */
-    .network-section { background: var(--navy-dark); padding: 48px 20px; }
-    .network-section .section-title { color: var(--white); }
-    .network-section .section-subtitle { color: rgba(255,255,255,0.60); }
-    .network-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .network-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 12px;
-      padding: 20px 16px;
-      text-align: center;
-      transition: background 0.2s;
-    }
-    .network-card:hover { background: rgba(245,166,35,0.10); }
-    .network-num {
-      font-family: 'Poppins', sans-serif;
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .network-label {
-      font-size: 12px;
-      color: rgba(255,255,255,0.65);
-      margin-top: 5px;
-      line-height: 1.4;
-    }
-
-    /* ── REGIONS SECTION ── */
-    .regions-section { background: var(--light-bg); padding: 44px 20px; }
-    .region-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .region-chip {
-      background: var(--navy);
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 600;
-      font-family: 'Poppins', sans-serif;
-      padding: 9px 18px;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .region-chip::before {
-      content: '';
-      width: 7px; height: 7px;
-      background: var(--gold);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
- 
-
-    /* ── DIVIDER ── */
-    .gold-divider {
-      width: 50px; height: 4px;
-      background: var(--gold);
-      border-radius: 2px;
-      margin-bottom: 20px;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (min-width: 600px) {
-      .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 700px; }
-      .teams-grid { grid-template-columns: repeat(3, 1fr); }
-      .team-card.wide { grid-column: span 1; }
-      .team-card.wide .team-card-img { aspect-ratio: 4/3; }
-      .network-grid { grid-template-columns: repeat(4, 1fr); }
-      .about-grid { grid-template-columns: 1fr; }
-      .culture-grid { grid-template-columns: 1fr 1fr; }
-          .team-card-body p {
-      font-size: 12.5px;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-    }
-
-    @media (min-width: 900px) {
-      .aboutSection { padding: 70px 40px; }
-      .stats-bar { padding: 44px 40px; }
-      .hero-banner { padding: 80px 40px 70px; }
-      .teams-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
-      .network-section { padding: 60px 40px; }
-      .regions-section { padding: 56px 40px; }
-    }
-
-    /* Animate on scroll hint */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-
-
-
-
-
 </head>
   <body class="gradient  animate--hover-default page-index">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -1687,8 +1158,8 @@ Shopify.routes.root = "/";</script>
 <div class="top-contact-bar">
   <div class="top-contact-inner">
     <div>
-      📞 <a href="tel:9043807874">+91 9043807874</a> |
-      <a href="tel:04427230275">044 27230275</a>
+      📞 <a href="tel:9843054858">+91 9843054858</a> |
+      <a href="tel:9677737393">+91 9677737393</a>
     </div>
     <div>
       <a href="https://wa.me/c/919043807874" class="quote-link">Get a Free Quote</a>
@@ -1981,7 +1452,7 @@ Shopify.routes.root = "/";</script>
 </li>
  
 <li>
-                                <a href="https://wa.me/c/919043807874" target="_blank" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                                <a href="/#cement" target="_blank" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
                               Cement
                                 
                                   
@@ -2005,7 +1476,7 @@ Shopify.routes.root = "/";</script>
 </li>
 
 <li>
-                                <a href="https://wa.me/919043807874" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                                <a href="https://wa.me/c/919043807874" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
                                 Bulk Orders
                                 
                                   
@@ -2016,7 +1487,7 @@ Shopify.routes.root = "/";</script>
                             
 </li>
                   </ul>
-                  <a href="https://wa.me/919043807874" style="padding: 0 10px;">
+                  <a href="https://wa.me/c/919043807874" style="padding: 0 10px;">
                     <img src="images/pricelist3.png" width="110px" height="50">
                     </a>
                 </nav>
@@ -2065,12 +1536,12 @@ Shopify.routes.root = "/";</script>
                               </span>
                               </a>
                             </li>--><li style="display: flex; align-items: center; gap: 1px;">
-  <a href="https://wa.me/919043807874" target="_blank" style="display: flex; font-size: 15px; align-items: center; text-decoration: none;">
+  <a href="https://wa.me/919843054858" target="_blank" style="display: flex; font-size: 15px; align-items: center; text-decoration: none;">
     <img src="images/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
-    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;">+91 9043807874</span>
+    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;">+91 93848 19295</span>
   </a> | 
-  <a href="tel:04427230275" target="_blank" style="display: flex; font-size: 15px; align-items: center; text-decoration: none;">
-    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;">044 27230275</span>
+  <a href="https://wa.me/919677737393" target="_blank" style="display: flex; font-size: 15px; align-items: center; text-decoration: none;">
+    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;">+91 93848 19297</span>
   </a>
 </li>
                         </ul> 
@@ -2136,7 +1607,7 @@ Shopify.routes.root = "/";</script>
                               <summary class="header__menu-item list-menu__item link focus-inset">
                                 <span>
                                   
-                                <a href="https://wa.me/c/919043807874" class="">
+                                <a href="/#cement" class="">
                               
                                   Cement
                               
@@ -2377,12 +1848,12 @@ Shopify.routes.root = "/";</script>
                         
                       
 
-                          <a href="https://wa.me/919043807874" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset">
+                          <a href="https://wa.me/c/919043807874" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset">
                             <span>Bulk Orders</span>
                           </a>
                         
 </li></ul>
-                <a href="https://wa.me/919043807874" style="padding: 0 10px;">
+                <a href="https://wa.me/c/919043807874" style="padding: 0 10px;">
                     <img src="images/pricelist3.png" width="110px" height="50">
                     </a>
                   </desktop-webi-menu><nav class="wbsecmenu secondary-menu-second_menu_dg3MBF  sec-menu-right">
@@ -2412,12 +1883,12 @@ Shopify.routes.root = "/";</script>
                           <span>Bulk Orders</span>
                         </a>
                       </li> --><li style="display: flex; align-items: center; gap: 1px;">
-  <a href="https://wa.me/919043807874" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
+  <a href="https://wa.me/919843054858" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
     <img src="images/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
-    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold; font-size: 15px;">+91 9043807874</span>
+    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold; font-size: 15px;">+91 93848 19295</span>
   </a> | 
-  <a href="tel:04427230275" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
-    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;font-size: 15px;">044 27230275</span>
+  <a href="https://wa.me/919677737393" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
+    <span style="margin-left: 5px; color:rgb(0, 0, 0); font-weight: bold;font-size: 15px;">+91 93848 19297</span>
   </a>
 </li>
                   </ul>
@@ -3591,36 +3062,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </section>
 
  
-<!-- NETWORK -->
-<div class="aboutMain">
-  
-<section class="network-section aboutSection">
-  <div style="max-width:800px;margin:0 auto;text-align:center;">
-    <div class="section-badge" style="background:rgba(245,166,35,0.18);">Our Network</div>
-    <h2 class="section-title" style="color:#fff;">A Trusted <span>Network</span> Across the Region</h2>
-    <div class="gold-divider" style="margin:0 auto 20px;"></div>
-    <p class="section-subtitle" style="color:rgba(255,255,255,0.60);margin-bottom:32px;">Hundreds of professionals trust Sri Kumaran Steels for consistent, quality supply.</p>
-    <div class="network-grid fade-up">
-      <div class="network-card">
-        <div class="network-num">500+</div>
-        <div class="network-label">Masons &amp; Bar Benders</div>
-      </div>
-      <div class="network-card">
-        <div class="network-num">50+</div>
-        <div class="network-label">Builders &amp; Contractors</div>
-      </div>
-      <div class="network-card">
-        <div class="network-num">200+</div>
-        <div class="network-label">Wholesale Sub-Dealers</div>
-      </div>
-      <div class="network-card">
-        <div class="network-num">15+</div>
-        <div class="network-label">Years of Service</div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
  
 <section id="shopify-section-template--24396489457948__b0b08e08-09e8-439c-a611-8e55b1bb26d4" class="shopify-section section"><link href="css/section-multicolumn.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/component-slider.css" rel="stylesheet" type="text/css" media="all">
@@ -5374,7 +4815,7 @@ ISTEEL Steel TMT Bar Fe-550 8mm
                   <a href="https://wa.me/c/919043807874" title="UltraTech Cement" class="media media--transparent media-- media--hover-effect">
                   
 
-                      <img  src="sksImages/m4.jpeg" sizes="(min-width: 1800px) 417px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="Isteel Steel TMT Bar - Fe 550 - 20mm - Sri Kumaran Steels.store" class="motion-reduce" loading="lazy" width="1076" height="1076"></a>
+                      <img  src="sksImages/m3.jpeg" sizes="(min-width: 1800px) 417px, (min-width: 992px) calc((100vw - 130px) / 4), (min-width: 768px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)" alt="Isteel Steel TMT Bar - Fe 550 - 20mm - Sri Kumaran Steels.store" class="motion-reduce" loading="lazy" width="1076" height="1076"></a>
               </div>
               
               
@@ -6296,211 +5737,6 @@ ISTEEL Steel TMT Bar Fe-550 8mm
 
 </section>
 
-<div class="aboutMain">
-  
-  
-<!-- PEOPLE & CULTURE -->
-<section class="culture-section aboutSection">
-  <div style="max-width:800px;margin:0 auto;">
-    <div class="section-badge">People &amp; Culture</div>
-    <h2 class="section-title">Our People, <span>Our Strength</span></h2>
-    <div class="gold-divider"></div>
-    <p class="section-subtitle">At Sri Kumaran Steels, employees are considered the backbone of the organization. We invest in their well-being and foster a community-driven workplace.</p>
-    <div class="culture-grid fade-up">
-      <div class="culture-card">
-        <div class="culture-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6a5 5 0 0 0-10 0v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm3-9H9V6a3 3 0 0 1 6 0v2Z"/></svg>
-        </div>
-        <div>
-          <h4>Daily Lunch for Employees</h4>
-          <p>To support employee well-being, daily lunch is prepared and provided at the godown, creating a caring and supportive work environment.</p>
-        </div>
-      </div>
-      <div class="culture-card">
-        <div class="culture-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4Zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8Z"/></svg>
-        </div>
-        <div>
-          <h4>Employee Insurance</h4>
-          <p>Insurance coverage is provided for all employees, ensuring their safety, security, and peace of mind while they serve the company.</p>
-        </div>
-      </div>
-      <div class="culture-card">
-        <div class="culture-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
-        </div>
-        <div>
-          <h4>Monthly Community Meetings</h4>
-          <p>The company organizes monthly meetings with masons, bar benders, and builders to strengthen professional relationships and share industry updates.</p>
-        </div>
-      </div>
-      <div class="culture-card">
-        <div class="culture-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm4 0h-2V8h2v8Z"/></svg>
-        </div>
-        <div>
-          <h4>Growth &amp; Community</h4>
-          <p>Sri Kumaran Steels is committed not only to business growth but also to people, partnerships, and community development across the region.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAMS & FEATURES -->
-<section class="teams-section aboutSection">
-  <div style="max-width:900px;margin:0 auto;">
-    <div class="section-badge">Our Teams &amp; Infrastructure</div>
-    <h2 class="section-title">What Makes Us <span>Strong</span></h2>
-    <div class="gold-divider"></div>
-    <p class="section-subtitle">From dedicated teams to a robust fleet, here is the strength behind Sri Kumaran Steels.</p>
-
-    <div class="teams-grid fade-up">
-
-      <!-- Marketing Team -->
-      <div class="team-card card-marketing">
-        <div class="team-card-img">
-          <!-- Replace with actual image: <img src="your-marketing-team.jpg" alt="Marketing Team" style="width:100%;height:100%;object-fit:cover;"> -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5v14l8-4 8 4V5H3Zm14 11.03-6-3-6 3V6.97l6 3 6-3v9.06Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Marketing</div>
-          <h3>Dedicated Marketing Team</h3>
-          <p>Our experienced marketing team works closely with builders, contractors, and customers to understand project requirements and provide the right construction material solutions.</p>
-        </div>
-      </div>
-
-      <!-- Administration Team -->
-      <div class="team-card card-admin">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm6 13H6v-.9c0-2 4-3.1 6-3.1s6 1.1 6 3.1v.9Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Administration</div>
-          <h3>Professional Administration Team</h3>
-          <p>Our administration team ensures smooth operations, efficient coordination, and organized order processing to maintain reliable service for every customer.</p>
-        </div>
-      </div>
-
-      <!-- Transport Team -->
-      <div class="team-card card-transport">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4ZM6 18.5A1.5 1.5 0 1 1 6 15.5a1.5 1.5 0 0 1 0 3Zm13.5-9 1.96 2.5H17V9.5h2.5ZM18 18.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Transport</div>
-          <h3>Reliable Transport Team</h3>
-          <p>Our skilled transport team manages timely dispatch and safe delivery of construction materials directly to project sites.</p>
-        </div>
-      </div>
-
-      <!-- Accounts Team -->
-      <div class="team-card card-accounts">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 14H7v-2h5v2Zm5-4H7v-2h10v2Zm0-4H7V7h10v2Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Accounts</div>
-          <h3>Accounts &amp; Billing Team</h3>
-          <p>Our accounts department maintains transparent billing, accurate records, and professional financial management for every transaction.</p>
-        </div>
-      </div>
-
-      <!-- Delivery Fleet -->
-      <div class="team-card card-fleet">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 5H3c-1.1 0-2 .9-2 2v9h2a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h2v-3l-4-5v-2H3m0 2h11v4H5v-4M7 15.5A1.5 1.5 0 1 1 7 15.5M17 15.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Fleet</div>
-          <h3>Strong Delivery Fleet – 15+ Vehicles</h3>
-          <p>With a fleet of more than 15 vehicles, we ensure fast and dependable transportation of steel, cement, and construction materials to multiple project locations.</p>
-        </div>
-      </div>
-
-      <!-- Workforce -->
-      <div class="team-card card-workforce">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Workforce</div>
-          <h3>Skilled Workforce – 50+ Professionals</h3>
-          <p>Our team of 50+ dedicated professionals supports operations, logistics, stock management, and customer service to ensure efficient business operations.</p>
-        </div>
-      </div>
-
-      <!-- Storage Godown (wide) -->
-      <div class="team-card card-godown wide">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 18V8l8 5 8-5v10H4Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Infrastructure</div>
-          <h3>Large Storage Godown</h3>
-          <p>Our spacious and well-organized godown allows us to store large quantities of construction materials safely and efficiently, ensuring ready stock at all times.</p>
-        </div>
-      </div>
-
-      <!-- Ready Cement Stock -->
-      <div class="team-card card-cement">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5L3 9v2h1v9h16v-9h1V9l-2-6Zm-9 14H6v-5h4v5Zm4 0h-4v-5h4v5Zm4 0h-4v-5h4v5Zm.5-7h-13L6.5 6h11l1.5 4Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Stock</div>
-          <h3>Ready Stock – Cement</h3>
-          <p>We maintain ready stock of leading cement brands to ensure quick supply for residential, commercial, and infrastructure projects.</p>
-        </div>
-      </div>
-
-      <!-- Ready Steel Stock -->
-      <div class="team-card card-steel">
-        <div class="team-card-img">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 9V7h-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2Zm-4 10H4V5h14v14Z"/></svg>
-          <span>Image Placeholder</span>
-        </div>
-        <div class="team-card-body">
-          <div class="team-badge">Stock</div>
-          <h3>Ready Stock – Steel</h3>
-          <p>We stock a wide range of high-quality steel bars to support construction projects with reliable availability and immediate supply.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
- 
-
-<!-- REGIONS -->
-<section class="regions-section aboutSection">
-  <div style="max-width:800px;margin:0 auto;">
-    <div class="section-badge">Service Areas</div>
-    <h2 class="section-title">Regions We <span>Serve</span></h2>
-    <div class="gold-divider"></div>
-    <p class="section-subtitle">Delivering construction materials reliably across these key regions in Tamil Nadu.</p>
-    <div class="region-chips fade-up">
-      <div class="region-chip">Kanchipuram</div>
-      <div class="region-chip">Tiruvannamalai</div>
-      <div class="region-chip">Uthiramerur</div>
-      <div class="region-chip">Arcot</div>
-      <div class="region-chip">Arakkonam</div>
-      <div class="region-chip">Tiruttani</div>
-      <div class="region-chip">Sholinghur</div>
-    </div>
-  </div>
-</section>
-
-</div>
 
 
 <section id="shopify-section-template--24396489457948__testimonial_fxWywa" class="shopify-section"><link href="css/component-slider.css" rel="stylesheet" type="text/css" media="all">
@@ -6996,9 +6232,7 @@ ISTEEL Steel TMT Bar Fe-550 8mm
 </div>
 
 
-</section>
-
-<footer id="shopify-section-sections--24396489752860__footer" class="shopify-section shopify-section-group-footer-group">
+</section><footer id="shopify-section-sections--24396489752860__footer" class="shopify-section shopify-section-group-footer-group">
 <link href="css/section-footer.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/component-newsletter.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/component-list-menu.css" rel="stylesheet" type="text/css" media="all">
@@ -7024,7 +6258,7 @@ ISTEEL Steel TMT Bar Fe-550 8mm
         }
     }</style><div class="footer section-sections--24396489752860__footer-padding color-background-1">
 <div class="footer__content-top page-width"><webi-collapse class="footer__blocks-wrapper grid grid--1-col-tablet-down grid--4-col-desktop grid--2-col grid--4-col-tablet "><div class="footer-block grid__item"><div class="wbfootcont  "><a href="/" class="flog" style="max-width: 150px;object-fit: contain">
-                                                    <img class="footer-logo img-fluid"   src="sksImages/logo1.jpeg" alt="Sri Kumaran Steels.store" height="69" width="1432" loading="lazy">
+                                                    <img class="footer-logo img-fluid"   src="sksImages/logo.jpeg" alt="Sri Kumaran Steels.store" height="69" width="1432" loading="lazy">
                                                 </a><div class="body">
                                                     <p>NO.28-B/75,Jawaharlal Street, Kanchipuram- 631502.</p>
                                                 </div><ul><li><svg viewBox="0 0 473.806 473.806">
@@ -7050,7 +6284,7 @@ ISTEEL Steel TMT Bar Fe-550 8mm
     <path d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11
       c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2
       c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z"></path>
-</svg> <span class="rte"><a href="tel:+91 9043807874">+91 </a><a href="tel:9043807874" title="tel:9043807874">9043807874</a><a href="tel:+91 9043807874"> ,</a><a href="tel:04427230275" title="tel:04427230275">044 27230275</a></span>
+</svg> <span class="rte"><a href="tel:+91 9843054858">+91 </a><a href="tel:9843054858" title="tel:9843054858">9843054858</a><a href="tel:+91 9843054858"> , +91 </a><a href="tel:9677737393" title="tel:9677737393">9677737393</a></span>
                                                     </li></ul>
                                         </div></div>
                                         
@@ -7067,13 +6301,13 @@ ISTEEL Steel TMT Bar Fe-550 8mm
                                                             About
                                                         </a>
                                                     </li>
-                                                    <li><a href="https://wa.me/c/919043807874" class="link link--text list-menu__item list-menu__item--link">
+                                                    <li><a href="/#cement" class="link link--text list-menu__item list-menu__item--link">
                                                             Cement
                                                         </a>
-                                                    </li><li><a href="https://wa.me/c/919043807874" class="link link--text list-menu__item list-menu__item--link">
+                                                    </li><li><a href="/#steel" class="link link--text list-menu__item list-menu__item--link">
                                                             TMT Bars & Steels
                                                         </a>
-                                                    </li>  <li><a href="https://wa.me/919043807874" class="link link--text list-menu__item list-menu__item--link">
+                                                    </li>  <li><a href="https://wa.me/c/919043807874" class="link link--text list-menu__item list-menu__item--link">
                                                             Bulk Orders
                                                         </a>
                                                     </li></ul>
@@ -7091,32 +6325,10 @@ ISTEEL Steel TMT Bar Fe-550 8mm
                     
                     <div></div>
             </div>
- <div class="footer__column footer--social">
-                    <div class="text-left">
-                    <h3>Social support</h3>
-                    
-<ul class="footer__list-social list-unstyled list-social"><li class="list-social__item">
-      <a href="#" class="link list-social__link"><svg aria-hidden="true" focusable="false" class="icon icon-facebook" viewBox="0 0 18 18">
-  <path fill="currentColor" d="M16.42.61c.27 0 .5.1.69.28.19.2.28.42.28.7v15.44c0 .27-.1.5-.28.69a.94.94 0 01-.7.28h-4.39v-6.7h2.25l.31-2.65h-2.56v-1.7c0-.4.1-.72.28-.93.18-.2.5-.32 1-.32h1.37V3.35c-.6-.06-1.27-.1-2.01-.1-1.01 0-1.83.3-2.45.9-.62.6-.93 1.44-.93 2.53v1.97H7.04v2.65h2.24V18H.98c-.28 0-.5-.1-.7-.28a.94.94 0 01-.28-.7V1.59c0-.27.1-.5.28-.69a.94.94 0 01.7-.28h15.44z"></path>
-</svg>
-<span class="visually-hidden">Facebook</span>
-      </a>
-    </li><li class="list-social__item">
-      <a href="#" class="link list-social__link"><svg aria-hidden="true" focusable="false" class="icon icon-instagram" viewBox="0 0 18 18">
-  <path fill="currentColor" d="M8.77 1.58c2.34 0 2.62.01 3.54.05.86.04 1.32.18 1.63.3.41.17.7.35 1.01.66.3.3.5.6.65 1 .12.32.27.78.3 1.64.05.92.06 1.2.06 3.54s-.01 2.62-.05 3.54a4.79 4.79 0 01-.3 1.63c-.17.41-.35.7-.66 1.01-.3.3-.6.5-1.01.66-.31.12-.77.26-1.63.3-.92.04-1.2.05-3.54.05s-2.62 0-3.55-.05a4.79 4.79 0 01-1.62-.3c-.42-.16-.7-.35-1.01-.66-.31-.3-.5-.6-.66-1a4.87 4.87 0 01-.3-1.64c-.04-.92-.05-1.2-.05-3.54s0-2.62.05-3.54c.04-.86.18-1.32.3-1.63.16-.41.35-.7.66-1.01.3-.3.6-.5 1-.65.32-.12.78-.27 1.63-.3.93-.05 1.2-.06 3.55-.06zm0-1.58C6.39 0 6.09.01 5.15.05c-.93.04-1.57.2-2.13.4-.57.23-1.06.54-1.55 1.02C1 1.96.7 2.45.46 3.02c-.22.56-.37 1.2-.4 2.13C0 6.1 0 6.4 0 8.77s.01 2.68.05 3.61c.04.94.2 1.57.4 2.13.23.58.54 1.07 1.02 1.56.49.48.98.78 1.55 1.01.56.22 1.2.37 2.13.4.94.05 1.24.06 3.62.06 2.39 0 2.68-.01 3.62-.05.93-.04 1.57-.2 2.13-.41a4.27 4.27 0 001.55-1.01c.49-.49.79-.98 1.01-1.56.22-.55.37-1.19.41-2.13.04-.93.05-1.23.05-3.61 0-2.39 0-2.68-.05-3.62a6.47 6.47 0 00-.4-2.13 4.27 4.27 0 00-1.02-1.55A4.35 4.35 0 0014.52.46a6.43 6.43 0 00-2.13-.41A69 69 0 008.77 0z"></path>
-  <path fill="currentColor" d="M8.8 4a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm0 7.43a2.92 2.92 0 110-5.85 2.92 2.92 0 010 5.85zM13.43 5a1.05 1.05 0 100-2.1 1.05 1.05 0 000 2.1z"></path>
-</svg>
-<span class="visually-hidden">Instagram</span>
-      </a>
-    </li><li class="list-social__item">
-      <a href="#" class="link list-social__link"><svg aria-hidden="true" focusable="false" class="icon icon-youtube" viewBox="0 0 100 70">
-  <path d="M98 11c2 7.7 2 24 2 24s0 16.3-2 24a12.5 12.5 0 01-9 9c-7.7 2-39 2-39 2s-31.3 0-39-2a12.5 12.5 0 01-9-9c-2-7.7-2-24-2-24s0-16.3 2-24c1.2-4.4 4.6-7.8 9-9 7.7-2 39-2 39-2s31.3 0 39 2c4.4 1.2 7.8 4.6 9 9zM40 50l26-15-26-15v30z" fill="currentColor"></path>
-</svg>
-<span class="visually-hidden">YouTube</span>
-      </a>
-    </li></ul></div>
-                </div>
-              
+            
+<div class="footer__column footer__column--info">
+                
+              </div>
              
                 </div>
       </div>
@@ -7869,17 +7081,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </div>
 
-<script>
-  // Scroll fade-up animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-</script>
 </body></html>
