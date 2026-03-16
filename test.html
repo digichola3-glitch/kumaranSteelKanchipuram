@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – Sri Kumaran Steels, Kanchipuram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #1a2e4a;
+      --navy-dark: #0f1e32;
+      --gold: #f5a623;
+      --gold-light: #ffc554;
+      --white: #ffffff;
+      --light-bg: #f5f7fa;
+      --text-dark: #1a2e4a;
+      --text-muted: #5a6a7e;
+      --border: #e2e8f0;
+      --card-shadow: 0 4px 20px rgba(26,46,74,0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--white);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 12px rgba(26,46,74,0.10);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 18px;
+      letter-spacing: -1px;
+    }
+    .logo-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .logo-text span { display: block; font-size: 11px; font-weight: 500; color: var(--text-muted); }
+    nav a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    nav a.active { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+    /* ── HERO BANNER ── */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #1e3a5f 100%);
+      padding: 60px 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(245,166,35,0.10);
+    }
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -30px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(245,166,35,0.07);
+    }
+    .breadcrumb {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+    .breadcrumb a { color: var(--gold); text-decoration: none; }
+    .hero-banner h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 6vw, 40px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      position: relative; z-index: 1;
+    }
+    .hero-banner h1 span { color: var(--gold); }
+    .hero-banner p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+      position: relative; z-index: 1;
+    }
+    .hero-divider {
+      width: 60px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin: 18px auto 0;
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section { padding: 52px 20px; }
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(20px, 5vw, 28px);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .section-title span { color: var(--gold); }
+    .section-subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .section-badge {
+      display: inline-block;
+      background: rgba(245,166,35,0.12);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── ABOUT STORY ── */
+    .about-section { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .about-text p {
+      font-size: 14px;
+      color: #3d4f63;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .values-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .value-tag {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      padding: 7px 14px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .value-tag .dot {
+      width: 7px; height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      padding: 36px 20px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.70);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* ── FOUNDER ── */
+    .founder-section { background: var(--light-bg); }
+    .founder-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .founder-img-wrap {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+      padding: 36px 20px 24px;
+      text-align: center;
+    }
+    .founder-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.10);
+      border: 4px solid var(--gold);
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .founder-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .founder-avatar .placeholder-icon {
+      font-size: 44px;
+      color: rgba(255,255,255,0.4);
+    }
+    .founder-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .founder-role {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .founder-body {
+      padding: 24px 22px;
+    }
+    .founder-body p {
+      font-size: 14px;
+      color: #3d4f63;
+      line-height: 1.80;
+      margin-bottom: 12px;
+    }
+    .founder-body p:last-child { margin-bottom: 0; }
+
+    /* ── PEOPLE & CULTURE ── */
+    .culture-section { background: var(--white); }
+    .culture-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .culture-card {
+      background: var(--light-bg);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border-left: 4px solid var(--gold);
+    }
+    .culture-icon {
+      width: 46px; height: 46px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .culture-icon svg { width: 22px; height: 22px; fill: var(--gold); }
+    .culture-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+    .culture-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── TEAMS & FEATURES GRID ── */
+    .teams-section { background: var(--light-bg); }
+    .teams-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(26,46,74,0.14);
+    }
+    .team-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #d0d8e4 0%, #b8c4d4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(26,46,74,0.18) 100%);
+    }
+    .team-card-img svg {
+      width: 40px; height: 40px;
+      fill: rgba(26,46,74,0.25);
+    }
+    .team-card-img span {
+      font-size: 11px;
+      color: rgba(26,46,74,0.45);
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    /* Color tints per card type */
+    .card-marketing .team-card-img { background: linear-gradient(135deg, #dde8f5 0%, #c2d3e8 100%); }
+    .card-admin    .team-card-img { background: linear-gradient(135deg, #e8f0e0 0%, #ccdec0 100%); }
+    .card-transport .team-card-img { background: linear-gradient(135deg, #faecd6 0%, #f0d4a0 100%); }
+    .card-accounts  .team-card-img { background: linear-gradient(135deg, #f0e0ec 0%, #dfc0d8 100%); }
+    .card-fleet     .team-card-img { background: linear-gradient(135deg, #dde8f5 0%, #c0cedf 100%); }
+    .card-workforce .team-card-img { background: linear-gradient(135deg, #e8f0e0 0%, #c8ddb8 100%); }
+    .card-godown    .team-card-img { background: linear-gradient(135deg, #f5e8d8 0%, #e0c8a8 100%); }
+    .card-cement    .team-card-img { background: linear-gradient(135deg, #eeeaf5 0%, #d8d0ea 100%); }
+    .card-steel     .team-card-img { background: linear-gradient(135deg, #dae4ee 0%, #b8cedd 100%); }
+
+    .team-card-body { padding: 16px 16px 18px; }
+    .team-badge {
+      display: inline-block;
+      background: rgba(245,166,35,0.12);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      margin-bottom: 7px;
+    }
+    .team-card-body h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .team-card-body p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Wide cards (span 2 cols) */
+    .team-card.wide {
+      grid-column: span 2;
+    }
+    .team-card.wide .team-card-img {
+      aspect-ratio: 16/6;
+    }
+
+    /* ── NETWORK SECTION ── */
+    .network-section { background: var(--navy-dark); padding: 48px 20px; }
+    .network-section .section-title { color: var(--white); }
+    .network-section .section-subtitle { color: rgba(255,255,255,0.60); }
+    .network-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .network-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .network-card:hover { background: rgba(245,166,35,0.10); }
+    .network-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .network-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    /* ── REGIONS SECTION ── */
+    .regions-section { background: var(--light-bg); padding: 44px 20px; }
+    .region-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .region-chip {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      padding: 9px 18px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .region-chip::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-dark);
+      padding: 32px 20px;
+      text-align: center;
+    }
+    footer p {
+      color: rgba(255,255,255,0.45);
+      font-size: 12px;
+    }
+    footer .footer-logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* ── DIVIDER ── */
+    .gold-divider {
+      width: 50px; height: 4px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 600px) {
+      .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 700px; }
+      .teams-grid { grid-template-columns: repeat(3, 1fr); }
+      .team-card.wide { grid-column: span 1; }
+      .team-card.wide .team-card-img { aspect-ratio: 4/3; }
+      .network-grid { grid-template-columns: repeat(4, 1fr); }
+      .about-grid { grid-template-columns: 1fr; }
+      .culture-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 900px) {
+      section { padding: 70px 40px; }
+      .stats-bar { padding: 44px 40px; }
+      .hero-banner { padding: 80px 40px 70px; }
+      .teams-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .network-section { padding: 60px 40px; }
+      .regions-section { padding: 56px 40px; }
+    }
+
+    /* Animate on scroll hint */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+ <main>
+
+
+
+<!-- HERO -->
+<div class="hero-banner">
+  <div class="breadcrumb"><a href="#">Home</a> / About Us</div>
+  <h1>About <span>Sri Kumaran Steels</span></h1>
+  <p>Trusted wholesale supplier of steel &amp; cement in Kanchipuram since 2012 — built on honesty, quality, and reliable service.</p>
+  <div class="hero-divider"></div>
+</div>
+
+<!-- ABOUT STORY -->
+<section class="about-section">
+  <div style="max-width:800px;margin:0 auto;">
+    <div class="section-badge">Our Story</div>
+    <h2 class="section-title">Building Trust Since <span>2012</span></h2>
+    <div class="gold-divider"></div>
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p>Sri Kumaran Steels, Kanchipuram was established in 2012 with a simple vision—to supply quality construction materials with honesty and reliability. What began as a small retail outlet has today grown into one of the trusted wholesale suppliers of steel and cement in the Kanchipuram region, thanks to the continued support of customers, builders, and contractors.</p>
+        <p>Over the years, the company has expanded its operations with dedicated departments including Marketing, Accounts, Administration, and Transport, ensuring smooth business operations and professional service to customers.</p>
+        <p>With a fleet of 15 delivery vehicles, Sri Kumaran Steels is able to deliver construction materials efficiently and on time to project sites. The company is supported by more than 50 committed employees, who play a vital role in managing operations, logistics, and customer service.</p>
+        <p>The company also maintains a strong network of over 500 masons and bar benders, and 50+ builders who regularly procure steel and cement, along with 200+ sub-dealers who purchase materials in wholesale quantities.</p>
+      </div>
+      <div class="values-strip">
+        <div class="value-tag"><span class="dot"></span>Fair Pricing</div>
+        <div class="value-tag"><span class="dot"></span>Quality Materials</div>
+        <div class="value-tag"><span class="dot"></span>Timely Delivery</div>
+        <div class="value-tag"><span class="dot"></span>Transparent Accounting</div>
+        <div class="value-tag"><span class="dot"></span>Customer Trust</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-grid fade-up">
+    <div class="stat-item">
+      <div class="stat-num">2012</div>
+      <div class="stat-label">Year Established</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Delivery Vehicles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Dedicated Employees</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">200+</div>
+      <div class="stat-label">Sub-Dealers</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOUNDER -->
+<section class="founder-section">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <div class="section-badge">Leadership</div>
+    <h2 class="section-title">Meet Our <span>Founder</span></h2>
+    <div class="gold-divider" style="margin:0 auto 28px;"></div>
+  </div>
+  <div class="founder-card fade-up">
+    <div class="founder-img-wrap">
+      <div class="founder-avatar">
+        <!-- Replace src with actual founder photo -->
+        <span class="placeholder-icon">👤</span>
+      </div>
+      <div class="founder-name">Mr. S. Anbu</div>
+      <div class="founder-role">Founder &amp; Managing Director</div>
+    </div>
+    <div class="founder-body">
+      <p>Sri Kumaran Steels is led by its founder, Mr. S. Anbu, whose vision and dedication have been the driving force behind the company's steady growth.</p>
+      <p>Under his leadership, the company has built strong relationships with builders, contractors, and dealers by maintaining reliability, ethical business practices, and consistent supply of quality materials.</p>
+      <p>His focus on long-term relationships, fair pricing, and service excellence has helped Sri Kumaran Steels become a trusted name in the regional construction industry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE & CULTURE -->
+<section class="culture-section">
+  <div style="max-width:800px;margin:0 auto;">
+    <div class="section-badge">People &amp; Culture</div>
+    <h2 class="section-title">Our People, <span>Our Strength</span></h2>
+    <div class="gold-divider"></div>
+    <p class="section-subtitle">At Sri Kumaran Steels, employees are considered the backbone of the organization. We invest in their well-being and foster a community-driven workplace.</p>
+    <div class="culture-grid fade-up">
+      <div class="culture-card">
+        <div class="culture-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6a5 5 0 0 0-10 0v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-6 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm3-9H9V6a3 3 0 0 1 6 0v2Z"/></svg>
+        </div>
+        <div>
+          <h4>Daily Lunch for Employees</h4>
+          <p>To support employee well-being, daily lunch is prepared and provided at the godown, creating a caring and supportive work environment.</p>
+        </div>
+      </div>
+      <div class="culture-card">
+        <div class="culture-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4Zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8Z"/></svg>
+        </div>
+        <div>
+          <h4>Employee Insurance</h4>
+          <p>Insurance coverage is provided for all employees, ensuring their safety, security, and peace of mind while they serve the company.</p>
+        </div>
+      </div>
+      <div class="culture-card">
+        <div class="culture-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
+        </div>
+        <div>
+          <h4>Monthly Community Meetings</h4>
+          <p>The company organizes monthly meetings with masons, bar benders, and builders to strengthen professional relationships and share industry updates.</p>
+        </div>
+      </div>
+      <div class="culture-card">
+        <div class="culture-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm4 0h-2V8h2v8Z"/></svg>
+        </div>
+        <div>
+          <h4>Growth &amp; Community</h4>
+          <p>Sri Kumaran Steels is committed not only to business growth but also to people, partnerships, and community development across the region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAMS & FEATURES -->
+<section class="teams-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <div class="section-badge">Our Teams &amp; Infrastructure</div>
+    <h2 class="section-title">What Makes Us <span>Strong</span></h2>
+    <div class="gold-divider"></div>
+    <p class="section-subtitle">From dedicated teams to a robust fleet, here is the strength behind Sri Kumaran Steels.</p>
+
+    <div class="teams-grid fade-up">
+
+      <!-- Marketing Team -->
+      <div class="team-card card-marketing">
+        <div class="team-card-img">
+          <!-- Replace with actual image: <img src="your-marketing-team.jpg" alt="Marketing Team" style="width:100%;height:100%;object-fit:cover;"> -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5v14l8-4 8 4V5H3Zm14 11.03-6-3-6 3V6.97l6 3 6-3v9.06Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Marketing</div>
+          <h3>Dedicated Marketing Team</h3>
+          <p>Our experienced marketing team works closely with builders, contractors, and customers to understand project requirements and provide the right construction material solutions.</p>
+        </div>
+      </div>
+
+      <!-- Administration Team -->
+      <div class="team-card card-admin">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm6 13H6v-.9c0-2 4-3.1 6-3.1s6 1.1 6 3.1v.9Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Administration</div>
+          <h3>Professional Administration Team</h3>
+          <p>Our administration team ensures smooth operations, efficient coordination, and organized order processing to maintain reliable service for every customer.</p>
+        </div>
+      </div>
+
+      <!-- Transport Team -->
+      <div class="team-card card-transport">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4ZM6 18.5A1.5 1.5 0 1 1 6 15.5a1.5 1.5 0 0 1 0 3Zm13.5-9 1.96 2.5H17V9.5h2.5ZM18 18.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Transport</div>
+          <h3>Reliable Transport Team</h3>
+          <p>Our skilled transport team manages timely dispatch and safe delivery of construction materials directly to project sites.</p>
+        </div>
+      </div>
+
+      <!-- Accounts Team -->
+      <div class="team-card card-accounts">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-7 14H7v-2h5v2Zm5-4H7v-2h10v2Zm0-4H7V7h10v2Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Accounts</div>
+          <h3>Accounts &amp; Billing Team</h3>
+          <p>Our accounts department maintains transparent billing, accurate records, and professional financial management for every transaction.</p>
+        </div>
+      </div>
+
+      <!-- Delivery Fleet -->
+      <div class="team-card card-fleet">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 5H3c-1.1 0-2 .9-2 2v9h2a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h2v-3l-4-5v-2H3m0 2h11v4H5v-4M7 15.5A1.5 1.5 0 1 1 7 15.5M17 15.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Fleet</div>
+          <h3>Strong Delivery Fleet – 15+ Vehicles</h3>
+          <p>With a fleet of more than 15 vehicles, we ensure fast and dependable transportation of steel, cement, and construction materials to multiple project locations.</p>
+        </div>
+      </div>
+
+      <!-- Workforce -->
+      <div class="team-card card-workforce">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3Zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3Zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5Zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Workforce</div>
+          <h3>Skilled Workforce – 50+ Professionals</h3>
+          <p>Our team of 50+ dedicated professionals supports operations, logistics, stock management, and customer service to ensure efficient business operations.</p>
+        </div>
+      </div>
+
+      <!-- Storage Godown (wide) -->
+      <div class="team-card card-godown wide">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 18V8l8 5 8-5v10H4Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Infrastructure</div>
+          <h3>Large Storage Godown</h3>
+          <p>Our spacious and well-organized godown allows us to store large quantities of construction materials safely and efficiently, ensuring ready stock at all times.</p>
+        </div>
+      </div>
+
+      <!-- Ready Cement Stock -->
+      <div class="team-card card-cement">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5L3 9v2h1v9h16v-9h1V9l-2-6Zm-9 14H6v-5h4v5Zm4 0h-4v-5h4v5Zm4 0h-4v-5h4v5Zm.5-7h-13L6.5 6h11l1.5 4Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Stock</div>
+          <h3>Ready Stock – Cement</h3>
+          <p>We maintain ready stock of leading cement brands to ensure quick supply for residential, commercial, and infrastructure projects.</p>
+        </div>
+      </div>
+
+      <!-- Ready Steel Stock -->
+      <div class="team-card card-steel">
+        <div class="team-card-img">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 9V7h-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2Zm-4 10H4V5h14v14Z"/></svg>
+          <span>Image Placeholder</span>
+        </div>
+        <div class="team-card-body">
+          <div class="team-badge">Stock</div>
+          <h3>Ready Stock – Steel</h3>
+          <p>We stock a wide range of high-quality steel bars to support construction projects with reliable availability and immediate supply.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="network-section">
+  <div style="max-width:800px;margin:0 auto;text-align:center;">
+    <div class="section-badge" style="background:rgba(245,166,35,0.18);">Our Network</div>
+    <h2 class="section-title" style="color:#fff;">A Trusted <span>Network</span> Across the Region</h2>
+    <div class="gold-divider" style="margin:0 auto 20px;"></div>
+    <p class="section-subtitle" style="color:rgba(255,255,255,0.60);margin-bottom:32px;">Hundreds of professionals trust Sri Kumaran Steels for consistent, quality supply.</p>
+    <div class="network-grid fade-up">
+      <div class="network-card">
+        <div class="network-num">500+</div>
+        <div class="network-label">Masons &amp; Bar Benders</div>
+      </div>
+      <div class="network-card">
+        <div class="network-num">50+</div>
+        <div class="network-label">Builders &amp; Contractors</div>
+      </div>
+      <div class="network-card">
+        <div class="network-num">200+</div>
+        <div class="network-label">Wholesale Sub-Dealers</div>
+      </div>
+      <div class="network-card">
+        <div class="network-num">15+</div>
+        <div class="network-label">Years of Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="regions-section">
+  <div style="max-width:800px;margin:0 auto;">
+    <div class="section-badge">Service Areas</div>
+    <h2 class="section-title">Regions We <span>Serve</span></h2>
+    <div class="gold-divider"></div>
+    <p class="section-subtitle">Delivering construction materials reliably across these key regions in Tamil Nadu.</p>
+    <div class="region-chips fade-up">
+      <div class="region-chip">Kanchipuram</div>
+      <div class="region-chip">Tiruvannamalai</div>
+      <div class="region-chip">Uthiramerur</div>
+      <div class="region-chip">Arcot</div>
+      <div class="region-chip">Arakkonam</div>
+      <div class="region-chip">Tiruttani</div>
+      <div class="region-chip">Sholinghur</div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+<script>
+  // Scroll fade-up animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
