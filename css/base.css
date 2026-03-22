@@ -93,6 +93,63 @@ html.no-js .no-js-hidden {
   align-items: end
 }
 
+.catalogue-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f5f7fa;
+  border-top: 2px solid #e0e0e0;
+}
+
+.catalogue-section h2 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.catalogue-section p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.catalogue-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.catalogue-btn {
+  padding: 12px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Ramco Style */
+.catalogue-btn.ramco {
+  background: rgb(244 174 0);
+  color: rgb(17 41 116);
+ 
+}
+
+.catalogue-btn.ramco:hover {
+  background: rgb(210, 151, 1);
+}
+
+/* UltraTech Style */
+.catalogue-btn.ultratech {
+  background: rgb(255 230 23);
+  color:black;
+}
+
+.catalogue-btn.ultratech:hover {
+  background: rgb(254, 231, 15);
+
+}
+
+
 .wb_button_combo .wb_home_sbtn:only-child {
   justify-content: start;
   width: 100%;
